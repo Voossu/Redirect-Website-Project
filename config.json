@@ -1,0 +1,11 @@
+{
+  "site":{
+    "name":"ReURL"
+  },
+  "db":{
+    "host":"localhost",
+    "name":"reurl",
+    "user":"reurl",
+    "pass":""
+  }
+}

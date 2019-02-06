@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', sans-serif;
+}
+
+
+body {
+    background: #d7d7d7;
+}
+
+/* ------------------------------------------------------------ form ------------------------------------------------------------ */
+
+input {
+    margin: 0.25em;
+    padding: 0.5em 0.75em;
+    border-radius: 0;
+    font-size: 1em;
+    box-sizing:border-box;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="number"],
+input[type="search"] {
+    display: block;
+    outline: none;
+    border: 0.15em solid #ccc;
+    width: calc(100% - 0.5em);
+    height: 2.5em;
+}
+
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=time]:hover,
+input[type=date]:hover,
+input[type=datetime]:hover,
+input[type=datetime-local]:hover,
+input[type=tel]:hover,
+input[type=number]:hover,
+input[type=search]:hover {
+    border: 0.15em solid #bbdefb;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=time]:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=search]:focus {
+    border: 0.15em solid #2196f3;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    border: none;
+    padding: 8px 15px;
+	overflow: hidden;
+	background: #2196f3;
+    color: #eee;
+    min-width: 120px;
+}
+
+
+input[type="checkbox"] {
+    position: relative;
+}
+
+input[type="checkbox"]:focus {
+    outline-color: #bbdefb;
+}
+
+input[type="checkbox"]:before {
+    border: 0.15em solid #ccc;
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 0.75em;
+    position: absolute;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 0.75em;
+    z-index: 1;
+}
+
+input[type="checkbox"]:checked:before {
+    border-color:#2196f3;
+    border-top-style: none;
+    border-right-style: none;
+    height: 0.5em;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 0.8em;
+    position: absolute;
+    top: 0;
+    width: 0.8em;
+    z-index: 0;
+}
+
+.logo {
+    display: block;
+    background: url("../img/logo.png") no-repeat;
+    background-size: cover;
+    width: 20em;
+    height: 5em;
+    margin: 0 auto;
+}
+
+.head-menu {
+    max-width: 1020px;
+    margin: auto;
+    text-align: right;
+}
+
+.head-menu a {
+    display: inline-block;
+    padding: 0.75em;
+    height: 1.4em;
+    border-right: 0.1em solid transparent;
+	border-left: 0.1em solid transparent;
+    border-bottom: 0.25em solid transparent;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.head-menu a:hover, .head-menu a.active {
+    border-right: 0.1em solid #9B9B9B;
+    border-left: 0.1em solid #9B9B9B;
+    border-bottom: 0.25em solid #2196f3;
+    color: #2196f3;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.head-menu a.logo, .head-menu a.logo:hover {
+    display: inline-block; 
+    border: none;
+    background: url("../img/logo.png") no-repeat;
+    background-size: cover;
+    width: 9em;
+    height: 1.2em;
+    margin: 0.3em auto;
+    float: left;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .head-menu a.logo, .head-menu a.logo:hover {
+        display: block; 
+        border: none;
+        width: 15em;
+        height: 3.5em;
+        margin: 1em auto;
+        float: none;
+    }
+    
+    
+    .head-menu {
+        text-align: center;
+        margin: 1em;
+    }
+    
+    .head-menu a {
+        width: 20%;
+        padding: 0.25em;
+        height: 1.25em;
+    }
+    
+    .head-menu a:hover, .head-menu a.active {
+        border-top: 0.25em solid #2196f3;
+        color: #2196f3;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    
+    .head-menu a.logo, .head-menu a.logo:hover {
+        
+    }
+}
+
+.content {
+    margin: 2em auto;
+    max-width: 1000px;
+}
+
+@media only screen and (min-width: 400px) {
+    .content {
+        min-height: calc(100vh - 11.5em);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .content {
+        min-height: calc(100vh - 14em);
+    }
+    
+    @media only screen and (max-height: 500px) {
+        .content {
+            min-height: calc(100vh - 10em);
+        }
+    }
+    
+    .logo {
+        width: 15em;
+        height: 4em;
+    }
+    
+    .head-menu {
+        margin: 1em auto;
+        text-align: center;
+    }
+    
+    .head-menu a {
+        border-right: 0.1em solid transparent;
+	    border-left: 0.1em solid transparent;
+        border-top: 0.25em solid transparent;
+        border-bottom: 0.25em solid transparent;
+        margin: 0.1em;
+        min-width: 30%;
+    }
+    
+    .head-menu a:hover, .head-menu a.active {
+        border-top: 0.25em solid #2196f3;
+        color: #2196f3;
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+form.create {
+    text-align: center;
+}
+
+
+form.create * {
+    margin: 2em 0.25em auto 0.25em;
+}
+
+footer {
+    display: block;
+    height: 4em;
+}
+
+footer .data {
+    max-width: 1000px;
+    padding: 0.3em;
+    margin: 0 auto;
+}
+
+footer .data .copyright {
+    padding: 1em;
+    font-size: 1em;
+    float: left;
+}
+
+footer .data .author {
+    float: right;
+}
+
+img.author-logo {
+    
+    width: 3.3em;
+    height: 3.3em;
+}
+
+.page {
+    background: #fff;
+    margin: 1.2em auto;
+    padding: 1em 1em;
+}
+
+h1 {
+    font-size: 1.35em;
+    margin: 0.25em 0;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin: 0.2em 0;
+}
+
+.compress {
+    margin: 2em auto;
+    text-align: center;
+}
+
+.compress input {
+    margin: auto;
+    max-width: 400px;
+}
+
+ul {
+    margin: auto 1em;
+}
+
+.text {
+    margin: 1em 1.25em;
+}
